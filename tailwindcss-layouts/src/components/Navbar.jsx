@@ -28,33 +28,57 @@ export default function Navbar() {
         </div>
       </div>
       <div className='w-full sm:flex h-full gap-1 hidden  justify-between'>
-        <div className='w-full flex  items-center justify-center hover:bg-[#F0F2F5]  border-b-4 border-[#4267b2] cursor-pointer  '>
+        <div className='w-full relative group  flex items-center justify-center hover:bg-[#F0F2F5]  border-b-4 border-[#4267b2] cursor-pointer  '>
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Home
+          </div>
           <FaHome size='1.5rem' color='#4267B2' />
         </div>
-        <div className='w-full flex items-center justify-center hover:bg-[#F0F2F5] hover:rounded-lg cursor-pointer'>
+        <div className='w-full relative group flex items-center justify-center hover:bg-[#F0F2F5] hover:rounded-lg cursor-pointer'>
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Watch
+          </div>
           <MdOutlineOndemandVideo size='1.5rem' color='#777' />
         </div>
-        <div className='w-full flex items-center justify-center hover:bg-[#F0F2F5] hover:rounded-lg cursor-pointer'>
+        <div className='w-full relative group flex items-center justify-center hover:bg-[#F0F2F5] hover:rounded-lg cursor-pointer'>
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Groups
+          </div>
           <HiOutlineUserGroup size='1.5rem' color='#777' />
         </div>
-        <div className='w-full flex items-center justify-center hover:bg-[#F0F2F5] hover:rounded-lg cursor-pointer'>
+        <div className='w-full relative group flex items-center justify-center hover:bg-[#F0F2F5] hover:rounded-lg cursor-pointer'>
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Gaming
+          </div>
           <SiFacebookgaming size='1.5rem' color='#777' />
         </div>
       </div>
       <div className='w-full flex  justify-end md:gap-5 sm:gap-3 gap-1'>
         <div
           title='menu'
-          className='relative flex content items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'
+          className='relative group flex content items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'
         >
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Menu
+          </div>
           <CgMenuGridR size='1.2rem' color='#000' />
         </div>
-        <div className='flex items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'>
+        <div className='flex relative group items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'>
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Messenger
+          </div>
           <FaFacebookMessenger size='1.2rem' color='#000' />
         </div>
-        <div className='flex items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'>
+        <div className='flex relative group items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'>
+          <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Notifications
+          </div>
           <IoMdNotificationsOutline size='1.2rem' color='#000' />
         </div>
-        <div className='flex items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'>
+        <div className='flex relative group items-center bg-[#e4e6eb] hover:bg-[#cfd1d4] rounded-full p-2.5 justify-center cursor-pointer'>
+        <div className='absolute invisible group-hover:visible bg-slate-700 text-white text-xs px-2 py-1 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-20'>
+            Account
+          </div>
           <CgProfile size='1.2rem' color='#000' />
         </div>
       </div>

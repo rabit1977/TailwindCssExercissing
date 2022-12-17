@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-      <div className='bg-[#F0F2F5]'>
+      <div className='bg-[#F0F2F5] h-screen font-fontFamily'>
         <Navbar />
         <Home />
       </div>
