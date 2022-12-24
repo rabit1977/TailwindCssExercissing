@@ -5,7 +5,7 @@ import SidebarRight from './components/SidebarRight';
 
 export default function Home() {
   return (
-    <div className=' w-full gap-2 grid grid-cols-5 p-2'>
+    <div className=' w-full gap-2 grid grid-cols-5 py-2 px-4'>
       <Sidebar />
       <Main />
       <SidebarRight />

@@ -34,10 +34,25 @@ export default function SidebarRight() {
         </li>
       </ul>
       <div className='flex gap-1 p-2 font-semibold text-slate-700 text-sm items-center '>
-        <div className='bg-[#e4md:e6e9] gap-2 text-lg rounded-full w-8 h-8 grid place-content-center'>
-          +
-        </div>
-        <div>See more</div>
+        <button className='flex items-center gap-2 mb-3'>
+          <div className='bg-slate-200 p-2 rounded-full hover:bg-slate-300/60'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              className='w-4 h-4'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+              />
+            </svg>
+          </div>
+          See more
+        </button>
       </div>
       <div className='border-b border-slate-400'></div>
     </div>
