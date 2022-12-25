@@ -3,22 +3,10 @@ import reactLogo from './assets/react.svg';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>
       <div className=''>
-        <div className='columns-3 shadow-xl bg-yellow-500 p-2'>
-          <div className=' bg-fuchsia-500   p-4 rounded-lg text-white font-semibold'>
-            01
-          </div>
-          <div className='bg-fuchsia-500 p-4 rounded-lg text-white font-semibold'>
-            02
-          </div>
-          <div className='flex-1 bg-fuchsia-500 p-4 rounded-lg text-white font-semibold'>
-            03
-          </div>
-        </div>
         <div className='columns-3 shadow-xl rounded-xl overflow-hidden my-4'>
           <img
             className='w-full   aspect-square'
@@ -104,7 +92,7 @@ function App() {
           </span>
         </span>
       </div>
-      <div className='isolate  hover:isolation-auto'>
+      <div>
         <img src='ferrari.jpg' alt='' className='w-96 h-60 float-right' />
         <img src='ferrari.jpg' alt='' className='w-96 h-60 float-left' />
         <p className=''>
@@ -475,6 +463,32 @@ function App() {
             </div>
           </div>
           <div className='absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5'></div>
+        </div>
+      </div>
+      <div className='bg-red-500 w-full p-4'>
+        <div className='bg-white p-4 font-semibold m-2'>
+          <p className='text-blue-500 p-2 text-lg'>
+            I love coding<span className='bg-indigo-500 p-2'>True</span>
+            <em className='text-white bg-red-400 p-2'>better coding</em>
+          </p>
+        </div>
+        <div className='bg-white p-4 font-semibold m-2'>
+          <p className='text-blue-500 p-2 text-lg'>
+            I love coding<span className='bg-indigo-500 p-2'>True</span>
+            <em className='text-white bg-red-400 p-2'>better coding</em>
+          </p>
+        </div>
+        <div className='bg-white p-4 font-semibold m-2'>
+          <p className='text-blue-500 p-2 text-lg'>
+            I love coding<span className='bg-indigo-500 p-2'>True</span>
+            <em className='text-white bg-red-400 p-2'>better coding</em>
+          </p>
+        </div>
+        <div className='bg-white p-4 font-semibold m-2'>
+          <p className='text-blue-500 p-2 text-lg'>
+            I love coding<span className='bg-indigo-500 p-2'>True</span>
+            <em className='text-white bg-red-400 p-2'>better coding</em>
+          </p>
         </div>
       </div>
     </>
