@@ -27,8 +27,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className='w-full sm:flex h-full gap-1 hidden  justify-between'>
-        <div className='w-full relative group  flex items-center justify-center hover:bg-[#F0F2F5]  border-b-4 border-[#4267b2] cursor-pointer  '>
+      <div className='w-full sm:flex h-full gap-1 hidden justify-between p-1'>
+        <div className='w-full relative group  flex items-center justify-center border-b-4 border-[#4267b2] -mb-1 cursor-pointer  '>
           <div className='absolute invisible group-hover:visible bg-slate-700  text-white text-xs px-3 py-2 transition duration-500 delay-300 ease-in-out hover:delay-300 rounded-md mt-24'>
             Home
           </div>
