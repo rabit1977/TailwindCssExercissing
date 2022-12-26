@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className=''>
-        <div className='columns-3 shadow-xl rounded-xl overflow-hidden my-4'>
+        <div className='columns-3 space-y-4 shadow-xl rounded-xl overflow-hidden my-4 border'>
           <img
             className='w-full   aspect-square'
             src='/public/ferrari.jpg'
@@ -56,12 +56,12 @@ function App() {
         </div>
       </div>
       <div>
-        <div className='max-w-xs  m-auto shadow-lg border-4 border-transparent  bg-rose-500 border-b-2  text-white p-4'>
-          <div className=' w-full text-left flex items-center justify-center gap-4'>
+        <div className='max-w-xs  m-auto shadow-lg border-4 ring-1 ring-black/20 ring-inset border-black/10 rounded-lg text-sm  bg-slate-50 border-b-2 text-slate-800 px-4 py-2'>
+          <div className=' w-full text-left flex items-center justify-start gap-4'>
             <img
               src='ferrari.jpg'
               alt=''
-              className='w-16 h-16 rounded-full border-4'
+              className='w-16 h-16 rounded-full border-4 border-black/20'
             />
             <div className='flex flex-col text-left'>
               <strong>Andi Ebibi</strong>
@@ -70,24 +70,24 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='bg-amber-300 p-4 my-4 border-b-2 '>
+      <div className='bg-rose-100 border-4 border-rose-400/60 ring-1 ring-black/40 p-4 my-4 border-b-2 shadow-md '>
         <span className='grid justify-items-center grid-cols-3 gap-4'>
-          <span className='p-2 bg-rose-500 border-4  rounded-full w-12 h-12'>
+          <span className='p-2 text-white text-sm font-semibold bg-rose-500 ring-2 ring-rose-400/80 border-4  rounded-full w-12 h-12'>
             1
           </span>
-          <span className='p-2 bg-rose-500 border-4  rounded-full w-12 h-12'>
+          <span className='p-2 text-white text-sm font-semibold bg-rose-500 ring-2 ring-rose-400/80 border-4  rounded-full w-12 h-12'>
             2
           </span>
-          <span className='p-2 bg-rose-500 border-4  rounded-full w-12 h-12'>
+          <span className='p-2 text-white text-sm font-semibold bg-rose-500 ring-2 ring-rose-400/80 border-4  rounded-full w-12 h-12'>
             3
           </span>
-          <span className='p-2 bg-rose-500 border-4  rounded-full w-12 h-12'>
+          <span className='p-2 text-white text-sm font-semibold bg-rose-500 ring-2 ring-rose-400/80 border-4  rounded-full w-12 h-12'>
             4
           </span>
-          <span className='p-2 bg-rose-500 border-4  rounded-full w-12 h-12'>
+          <span className='p-2 text-white text-sm font-semibold bg-rose-500 ring-2 ring-rose-400/80 border-4  rounded-full w-12 h-12'>
             5
           </span>
-          <span className='p-2 bg-rose-500 border-4  rounded-full w-12 h-12'>
+          <span className='p-2 text-white text-sm font-semibold bg-rose-500 ring-2 ring-rose-400/80 border-4  rounded-full w-12 h-12'>
             6
           </span>
         </span>
@@ -244,7 +244,7 @@ function App() {
           <div className='relative rounded-xl overflow-auto'>
             <div className='m-4 bg-white dark:bg-slate-800 shadow-xl overflow-hidden'>
               <div className='overflow-scroll grid grid-cols-[70px,repeat(7,100px)] grid-rows-[auto,repeat(16,50px)] max-h-[350px]'>
-                <div className='row-start-[1] col-start-[1] sticky top-0 z-10 bg-white dark:bg-gradient-to-b dark:from-slate-600 dark:to-slate-700 border-slate-100 dark:border-black/10 bg-clip-padding text-slate-900 dark:text-slate-200 border-b text-sm font-medium py-2'></div>
+                <div className='row-start-[1] col-start-[1] sticky top-0 z-10 bg-white dark:bg-gradient-to-b dark:from-slate-600 dark:to-slate-700 border-slate-100 dark:border-black/10 bg-clip-padding text-slate-00 dark:text-slate-200 border-b text-sm font-medium py-2'></div>
                 <div className='row-start-[1] col-start-[2] sticky top-0 z-10 bg-white dark:bg-gradient-to-b dark:from-slate-600 dark:to-slate-700 border-slate-100 dark:border-black/10 bg-clip-padding text-slate-900 dark:text-slate-200 border-b text-sm font-medium py-2 text-center'>
                   Sun
                 </div>
@@ -490,6 +490,387 @@ function App() {
             <em className='text-white bg-red-400 p-2'>better coding</em>
           </p>
         </div>
+      </div>
+      <div className='relative bg-red-100 mt-2 rounded-xl overflow-auto p-8'>
+        <div className='relative text-sm font-medium leading-6'>
+          <div className='bg-purple-400/20 border border-purple-700/10 rounded-lg p-4 dark:bg-sky-900/70 dark:border-0'>
+            <div className='static bg-purple-400/20 border border-purple-700/10 p-4 h-32 dark:bg-sky-400/20 dark:border-0'>
+              <p className='text-purple-700 dark:text-sky-200'>Static parent</p>
+              <div className='absolute bottom-0 left-0 bg-purple-500 shadow-lg rounded-lg p-4 text-white dark:bg-sky-500'>
+                <p>Absolute child</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='relative rounded-xl bg-slate-100 mt-4 overflow-auto p-8'>
+        <div className='relative text-sm font-medium leading-6'>
+          <div className='bg-sky-400/20 border border-sky-700/10 rounded-lg p-4 dark:bg-blue-900/70 dark:border-0'>
+            <div className='relative bg-sky-400/20 border border-sky-700/10 p-4 h-32 dark:bg-blue-400/20 dark:border-0'>
+              <p className='text-sky-700 dark:text-white'>Relative parent</p>
+              <div className='absolute bottom-0 left-0 bg-sky-500 shadow-lg rounded-lg p-4 text-white dark:bg-blue-500'>
+                <p>Absolute child</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='relative text-sm font-medium leading-6'>
+        <div className='relative bg-indigo-400/20 border border-indigo-700/10 rounded-lg p-4 dark:bg-indigo-900/80 dark:border-0'>
+          <p className='text-indigo-700 -mt-2 mb-2 dark:text-indigo-200'>
+            Relative parent
+          </p>
+          <div className='static bg-indigo-400/20 border border-indigo-700/10 p-4 h-32 flex flex-col justify-between dark:border-0'>
+            <p className='text-indigo-700 dark:text-indigo-200'>
+              Static parent
+            </p>
+            <div className='flex gap-4'>
+              <div className=' bottom-0 left-0 bg-indigo-500 shadow-lg rounded-lg p-4 text-white'>
+                <p>Static child</p>
+              </div>
+              <div className='bg-indigo-100 shadow-lg rounded-lg p-4 text-indigo-600'>
+                <p>Static sibling</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='relative text-sm font-medium leading-6 mt-4'>
+        <div className='relative bg-indigo-400/20 border border-indigo-700/10 rounded-lg p-4 dark:bg-indigo-900/80 dark:border-0'>
+          <p className='text-indigo-700 -mt-2 mb-2 dark:text-indigo-200'>
+            Relative parent
+          </p>
+          <div className='static bg-indigo-400/20 border border-indigo-700/10 p-4 h-32 flex flex-col justify-between dark:border-0'>
+            <p className='text-indigo-700 dark:text-indigo-200'>
+              Static parent
+            </p>
+            <div className='flex gap-4'>
+              <div className='absolute top-0 right-0 bg-indigo-500 shadow-lg rounded-lg p-4 text-white'>
+                <p>Absolute child</p>
+              </div>
+              <div className='bg-indigo-100 shadow-lg rounded-lg p-4 text-indigo-600'>
+                <p>Static sibling</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='relative rounded-xl overflow-auto'>
+        <div className='px-3 mt-4 bg-slate-200 p-4 rounded-xl'>
+          <div className='relative max-w-md mx-auto bg-white dark:bg-slate-800 shadow-lg h-80 overflow-hidden ring-1 ring-slate-900/5'>
+            <div className='absolute top-0 left-0 right-0 px-4 py-3 flex items-center font-semibold text-sm text-slate-900 dark:text-slate-200 bg-slate-50/90 dark:bg-slate-700/90 backdrop-blur-sm ring-1 ring-slate-900/10 dark:ring-black/10'>
+              Contacts
+            </div>
+            <div className='overflow-auto flex flex-col divide-y h-80 dark:divide-slate-200/5'>
+              <div className='flex items-center gap-4 p-4'>
+                <img className='w-12 h-12 rounded-full' src='hedyLammarr.jpg' />
+                <strong className='text-slate-900 text-sm font-medium dark:text-slate-200'>
+                  Andrew Alfred
+                </strong>
+              </div>
+              <div className='flex items-center gap-4 p-4'>
+                <img className='w-12 h-12 rounded-full' src='hedyLammarr.jpg' />
+                <strong className='text-slate-900 text-sm font-medium dark:text-slate-200'>
+                  Debra Houston
+                </strong>
+              </div>
+              <div className='flex items-center gap-4 p-4'>
+                <img className='w-12 h-12 rounded-full' src='hedyLammarr.jpg' />
+                <strong className='text-slate-900 text-sm font-medium dark:text-slate-200'>
+                  Jane White
+                </strong>
+              </div>
+              <div className='flex items-center gap-4 p-4'>
+                <img className='w-12 h-12 rounded-full' src='hedyLammarr.jpg' />
+                <strong className='text-slate-900 text-sm font-medium dark:text-slate-200'>
+                  Ray Flint
+                </strong>
+              </div>
+              <div className='flex items-center gap-4 p-4'>
+                <img className='w-12 h-12 rounded-full' src='hedyLammarr.jpg' />
+                <strong className='text-slate-900 text-sm font-medium dark:text-slate-200'>
+                  Mindy Albrect
+                </strong>
+              </div>
+              <div className='flex items-center gap-4 p-4'>
+                <img className='w-12 h-12 rounded-full' src='hedyLammarr.jpg' />
+                <strong className='text-slate-900 text-sm font-medium dark:text-slate-200'>
+                  David Arnold
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25 mt-4'>
+        <div className='relative rounded-xl overflow-auto p-8'>
+          <div className='grid grid-cols-3 grid-rows-3 place-items-center gap-4 font-mono text-white text-sm font-bold leading-6'>
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 w-14 h-14 absolute -left-4 -top-4 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  01
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 absolute inset-x-0 top-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  02
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 w-14 h-14 absolute right-0 top-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  03
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 w-14 absolute inset-y-0 left-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  04
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 absolute inset-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  05
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 w-14 absolute inset-y-0 right-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  06
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 w-14 h-14 absolute left-0 bottom-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  07
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 absolute inset-x-0 bottom-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  08
+                </div>
+              </div>
+            </div>
+
+            <div className='w-32 h-32 bg-purple-200'>
+              <div className='relative w-18 h-18 sm:w-32 sm:h-32 rounded-lg bg-stripes-purple'>
+                <div className='p-4 w-14 h-14 absolute right-0 bottom-0 flex items-center justify-center bg-purple-500 shadow-lg rounded-lg'>
+                  09
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5'></div>
+      </div>
+      <div class='relative rounded-xl overflow-auto'>
+        <div class='py-8'>
+          <div class='mb-3 pl-4 text-sm font-medium text-slate-500 dark:text-slate-400'>
+            Showing all rows
+          </div>
+          <table class='border-collapse w-full border-y border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm'>
+            <thead class='bg-slate-50 dark:bg-slate-700'>
+              <tr>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-left'>
+                  Invoice #
+                </th>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-left'>
+                  Client
+                </th>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-right'>
+                  Amount
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #100
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  Pendant Publishing
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $2,000.00
+                </td>
+              </tr>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #101
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  Kruger Industrial Smoothing
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $545.00
+                </td>
+              </tr>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #102
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  J. Peterman
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $10,000.25
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='mt-10 mb-3 pl-4 text-sm font-medium text-slate-500 dark:text-slate-400'>
+            Hiding a row using{' '}
+            <code class='text-xs text-slate-700 dark:text-slate-300'>
+              `collapse`
+            </code>
+          </div>
+          <table class='border-collapse w-full border-y border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm'>
+            <thead class='bg-slate-50 dark:bg-slate-700'>
+              <tr>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-left'>
+                  Invoice #
+                </th>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-left'>
+                  Client
+                </th>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-right'>
+                  Amount
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #100
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  Pendant Publishing
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $2,000.00
+                </td>
+              </tr>
+              <tr class='collapse'>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #101
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  Kruger Industrial Smoothing
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $545.00
+                </td>
+              </tr>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #102
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  J. Peterman
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $10,000.25
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='mt-10 mb-3 pl-4 text-sm font-medium text-slate-500 dark:text-slate-400'>
+            Hiding a row using{' '}
+            <code class='text-xs text-slate-700 dark:text-slate-300'>
+              `hidden`
+            </code>
+          </div>
+          <table class='border-collapse w-full border-y border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm'>
+            <thead class='bg-slate-50 dark:bg-slate-700'>
+              <tr>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-left'>
+                  Invoice #
+                </th>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-left'>
+                  Client
+                </th>
+                <th class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-600 font-semibold px-4 py-3 text-slate-900 dark:text-slate-200 text-right'>
+                  Amount
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #100
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  Pendant Publishing
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $2,000.00
+                </td>
+              </tr>
+              <tr class='hidden'>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #101
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  Kruger Industrial Smoothing
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $545.00
+                </td>
+              </tr>
+              <tr>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  #102
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400'>
+                  J. Peterman
+                </td>
+                <td class='border first:border-l-0 last:border-r-0 border-slate-300 dark:border-slate-700 px-4 py-3 text-slate-500 dark:text-slate-400 text-right tabular-nums'>
+                  $10,000.25
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class='not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25'>
+        <div class='relative rounded-xl overflow-auto p-8'>
+          <div class='flex justify-center -space-x-3 font-mono text-white text-sm font-bold leading-6'>
+            <div class='w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-40 dark:ring-slate-900'>
+              05
+            </div>
+            <div class='w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-30 dark:ring-slate-900'>
+              04
+            </div>
+            <div class='w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-20 dark:ring-slate-900'>
+              03
+            </div>
+            <div class='w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-10 dark:ring-slate-900'>
+              02
+            </div>
+            <div class='w-16 h-16 rounded-full flex items-center justify-center bg-pink-500 shadow-lg ring-2 ring-white z-0 dark:ring-slate-900'>
+              01
+            </div>
+          </div>
+        </div>
+        <div class='absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5'></div>
       </div>
     </>
   );
