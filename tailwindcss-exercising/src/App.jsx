@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
+import { Checkbox } from './Checkbox';
+import Button from './Button';
+import { LargeButtons } from './LargeButtons';
+import { LoadingButton } from './LoadingButton';
 
 function App() {
   const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -873,7 +877,7 @@ function App() {
         <div class='absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5'></div>
       </div>
       {/* responsive design */}
-      <main class='py-6 px-4 sm:p-6 md:py-10 md:px-8'>
+      <main class='py-6 px-4 sm:p-6 md:py-10 md:px-8 border mt-6 shadow-sm '>
         <div class='max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2'>
           <div class='relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1'>
             <h1 class='mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white'>
@@ -969,7 +973,219 @@ function App() {
           </p>
         </div>
       </main>
-    
+      {/* hover and focus state */}
+      <section className='border shadow-sm mt-6 p-4'>
+        <header class='bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6'>
+          <div class='flex items-center justify-between'>
+            <h2 class='font-semibold text-slate-900'>Projects</h2>
+            <a
+              href='/new'
+              class='hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm'
+            >
+              <svg
+                width='20'
+                height='20'
+                fill='currentColor'
+                class='mr-2'
+                aria-hidden='true'
+              >
+                <path d='M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z' />
+              </svg>
+              New
+            </a>
+          </div>
+          <form class='group relative'>
+            <svg
+              width='20'
+              height='20'
+              fill='currentColor'
+              class='absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500'
+              aria-hidden='true'
+            >
+              <path
+                fill-rule='evenodd'
+                clip-rule='evenodd'
+                d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z'
+              />
+            </svg>
+            <input
+              class='focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm'
+              type='text'
+              aria-label='Filter projects'
+              placeholder='Filter projects...'
+            />
+          </form>
+        </header>
+        <ul class='bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6'>
+          <li className='hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm '>
+            <a href='#' class=''>
+              <dl class='grid sm:block text-left  lg:grid xl:block grid-cols-2 grid-rows-2 items-center'>
+                <div className=''>
+                  <dt class='sr-only'>Title</dt>
+                  <dd class='group-hover:text-white font-semibold text-slate-900'>
+                    project.title
+                  </dd>
+                </div>
+                <div>
+                  <dt class='sr-only'>Category</dt>
+                  <dd class='group-hover:text-blue-200'>project.category</dd>
+                </div>
+                <div class='col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4'>
+                  <dt class='sr-only'>Users</dt>
+                  <dd
+                    x-for='user in project.users'
+                    class='flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5'
+                  >
+                    <img
+                      src='ferrari.jpg'
+                      alt='user.name'
+                      class='w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white'
+                      loading='lazy'
+                    />
+                  </dd>
+                </div>
+              </dl>
+            </a>
+          </li>
+          <li className='hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm '>
+            <a href='#' class=''>
+              <dl class='grid sm:block text-left  lg:grid xl:block grid-cols-2 grid-rows-2 items-center'>
+                <div className=''>
+                  <dt class='sr-only'>Title</dt>
+                  <dd class='group-hover:text-white font-semibold text-slate-900'>
+                    project.title
+                  </dd>
+                </div>
+                <div>
+                  <dt class='sr-only'>Category</dt>
+                  <dd class='group-hover:text-blue-200'>project.category</dd>
+                </div>
+                <div class='col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4'>
+                  <dt class='sr-only'>Users</dt>
+                  <dd
+                    x-for='user in project.users'
+                    class='flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5'
+                  >
+                    <img
+                      src='ferrari.jpg'
+                      alt='user.name'
+                      class='w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white'
+                      loading='lazy'
+                    />
+                  </dd>
+                </div>
+              </dl>
+            </a>
+          </li>{' '}
+          <li className='hover:bg-blue-500 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 bg-white ring-1 ring-slate-200 shadow-sm '>
+            <a href='#' class=''>
+              <dl class='grid sm:block text-left  lg:grid xl:block grid-cols-2 grid-rows-2 items-center'>
+                <div className=''>
+                  <dt class='sr-only'>Title</dt>
+                  <dd class='group-hover:text-white font-semibold text-slate-900'>
+                    project.title
+                  </dd>
+                </div>
+                <div>
+                  <dt class='sr-only'>Category</dt>
+                  <dd class='group-hover:text-blue-200'>project.category</dd>
+                </div>
+                <div class='col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4'>
+                  <dt class='sr-only'>Users</dt>
+                  <dd
+                    x-for='user in project.users'
+                    class='flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5'
+                  >
+                    <img
+                      src='ferrari.jpg'
+                      alt='user.name'
+                      class='w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white'
+                      loading='lazy'
+                    />
+                  </dd>
+                </div>
+              </dl>
+            </a>
+          </li>
+          <li class='flex'>
+            <a
+              href='/new'
+              class='hover:border-blue-500 hover:border-solid hover:bg-white hover:text-blue-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed border-slate-300 text-sm leading-6 text-slate-900 font-medium py-3'
+            >
+              <svg
+                class='group-hover:text-blue-500 mb-1 text-slate-400'
+                width='20'
+                height='20'
+                fill='currentColor'
+                aria-hidden='true'
+              >
+                <path d='M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z' />
+              </svg>
+              New project
+            </a>
+          </li>
+        </ul>
+      </section>
+      {/* CSS Grids filters */}
+      <div class='grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 border p-6 mt-4 shadow-md'>
+        <div class='blur'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div class='col-start-3 sepia'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div class='saturate-200'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div class='grayscale'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div class='row-start-1 col-start-2 col-span-2 invert'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+      </div>
+      {/* CSS grid transforms */}
+      <div className='border m-6 shadow-sm p-4'>
+        <div class='grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 '>
+          <div class='transform scale-110 -rotate-6'>
+            <img src='/ferrari.jpg' alt='' loading='lazy' />
+          </div>
+          <div class='col-start-3 transform scale-75 rotate-6 translate-x-2 translate-y-15'>
+            <img src='/ferrari.jpg' alt='' loading='lazy' />
+          </div>
+          <div class='transform scale-150 translate-y-11'>
+            <img src='/ferrari.jpg' alt='' loading='lazy' />
+          </div>
+          <div class='transform translate-y-24'>
+            <img src='/ferrari.jpg' alt='' loading='lazy' />
+          </div>
+          <div class='row-start-1 col-start-2 col-span-2 transform translate-x-20 translate-y-4'>
+            <img src='/ferrari.jpg' alt='' loading='lazy' />
+          </div>
+        </div>
+      </div>
+      {/* CSS grid */}
+      <div class='grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 border m-6 p-4 shadow-sm'>
+        <div>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div class='col-start-3'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+        <div class='row-start-1 col-start-2 col-span-2'>
+          <img src='/ferrari.jpg' alt='' loading='lazy' />
+        </div>
+      </div>
+      <Checkbox />
+      <Button />
+      <LargeButtons />
+      <LoadingButton />
     </>
   );
 }
