@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function product() {
   return (
-    <div>product page</div>
+    <div>product page now</div>
   )
 }
