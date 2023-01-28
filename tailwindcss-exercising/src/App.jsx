@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
-import { Checkbox } from './Checkbox';
 import Button from './Button';
+import { Checkbox } from './Checkbox';
+import { DropdownButton } from './DropdownButton';
 import { LargeButtons } from './LargeButtons';
 import { LoadingButton } from './LoadingButton';
+import { Sliders } from './Sliders';
 
 function App() {
   const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -1186,6 +1186,8 @@ function App() {
       <Button />
       <LargeButtons />
       <LoadingButton />
+      <DropdownButton />
+      <Sliders />
     </>
   );
 }
