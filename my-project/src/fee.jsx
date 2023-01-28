@@ -4,9 +4,8 @@ export default function fee() {
   return (
     <>
       <div>fee</div>
-      <p>life</p>
-      <p>lifes</p>
-      <p>lifes dir</p>
+      <div>2</div>
+      <div>3</div>
     </>
   );
 }
