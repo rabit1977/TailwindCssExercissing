@@ -7,6 +7,8 @@ export const bad = () => {
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, ducimus.
       </p>
+      <span>more places</span>
+      <b>bold</b>
     </>
   );
-}
+};
