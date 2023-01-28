@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const bad = () => {
+export default function bad() {
   return (
     <div>bad</div>
   )
