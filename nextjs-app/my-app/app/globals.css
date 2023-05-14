@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tooltip {
+    @apply after:content-["Search"] after:hidden hover:after:absolute hover:after:top-20 hover:after:flex hover:after:bg-slate-800 hover:after:text-white hover:after:px-6 hover:after:py-2 hover:after:rounded-full hover:transition hover:duration-300 hover:ease-in-out
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+}

@@ -1,6 +1,0 @@
-# Git & Github - Full Course
-
-
-All in - course - "Learning git" *******
-// Learn git here, don't go away, it's time to learn now or .....
-// And enjoy learning with me.....
