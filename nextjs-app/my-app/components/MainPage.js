@@ -5,9 +5,9 @@ import Sidebar from './Sidebar';
 
 export default function MainPage() {
   return (
-    <div className='bg-slate-300 p-2 lg:p-4 grid grid-cols-6 h-screen'>
+    <div className='bg-white px-2 pt-8 gap-4 xl:gap-6 grid grid-cols-6 h-screen'>
       {/* Sidebar wrapper */}
-      <div className='grid col-span-1 p-2 bg-yellow-400'>
+      <div className='grid col-span-1 xl:ml-4'>
         <Sidebar />
       </div>
       {/* Main and Main Header wrapper */}
