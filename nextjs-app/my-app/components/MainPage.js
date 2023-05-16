@@ -11,8 +11,8 @@ export default function MainPage() {
         <Sidebar />
       </div>
       {/* Main and Main Header wrapper */}
-      <div className='grid col-span-5 grid-rows-8 p-2 lg:p-4 bg-pink-300'>
-        <div className='h-20  bg-indigo-300'>
+      <div className='grid col-span-5 grid-rows-8 p-2 lg:p-4 divide-y-4'>
+        <div className='h-20 flex'>
           <MainHeader />
         </div>
         <div className=''>
