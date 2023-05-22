@@ -1,9 +1,7 @@
-'use client';
+// 'use client';
 
-import Navbar from '@/components/Navbar';
-import './globals.css';
 import { Inter } from 'next/font/google';
-import MainPage from '@/components/MainPage';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,11 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' className='dark'>
-      <body className={`${inter.className} h-full`}>
-        <Navbar />
-        <MainPage />
-        {children}
-      </body>
+      <body className={`${inter.className} h-full`}>{children}</body>
     </html>
   );
 }
